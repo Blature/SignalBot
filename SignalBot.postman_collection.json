@@ -1,0 +1,338 @@
+{
+	"info": {
+		"_postman_id": "943ba044-755c-4849-9de6-0d916f893a80",
+		"name": "SignalBot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6684302"
+	},
+	"item": [
+		{
+			"name": "Airgram",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server}}/api/airgram?sort[_id]=-1",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"airgram"
+							],
+							"query": [
+								{
+									"key": "sort[_id]",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send Phone Verification Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"989163349938\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/airgram/send-phone-verification-code",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"airgram",
+								"send-phone-verification-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Phone Verification Code",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"989163349938\",\n    \"code\":\"81166\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/airgram/set-phone-verification-code",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"airgram",
+								"set-phone-verification-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"+989163349938\",\n    \"code\":\"1122\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/airgram/1320e179-8bc1-4521-ba3b-5fe3734c70df",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"airgram",
+								"1320e179-8bc1-4521-ba3b-5fe3734c70df"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Phone Number",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"phoneNumber\":\"+989163349938\",\n    \"code\":\"1122\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/airgram/by-phone-number/989163349938",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"airgram",
+								"by-phone-number",
+								"989163349938"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": []
+		},
+		{
+			"name": "Signal Reader",
+			"item": [
+				{
+					"name": "Test",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "#EUR/USDT LONG SCALP\n\n⚠️HIGHRISK⚠️\n⚠️Wait for entry! (Limit order)\n\nℹ️4H TIMEFRAME FORMING FALLING WEDGE\n\nEntry: 6.900 - 6.796\nSPLIT UR ENTRIES\nUse 1% margin on each entry prices\n\nTP:\n1) 6.952\n2) 7.083\n3) 7.366\n4) 7.869\n5) 8.386\n\nSL: 6.745 (If 4H Closing Candle Below this price -1.49%)",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/signal-reader/test",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"signal-reader",
+								"test"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chats",
+			"item": [
+				{
+					"name": "Get All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"my title changed\",\n    \"setting\": {\n        \"saveMessage\": {\n            \"isEnabled\": false\n        },\n        \"detectSingal\": {\n            \"isEnabled\": true,\n            \"allowedParsers\": \"\"\n        },\n        \"forward\": {\n            \"isEnabled\": true,\n            \"tgChatId\": 0,\n            \"forwardOriginal\": true,\n            \"forwardSignal\": true,\n            \"forwardTrade\": true\n        },\n        \"trade\": {\n            \"isEnabled\": false,\n            \"maxTpLevel\": 2\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/chats",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"chats"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"my title changed\",\n    \"setting\": {\n        \"saveMessage\": {\n            \"isEnabled\": false\n        },\n        \"detectSingal\": {\n            \"isEnabled\": true,\n            \"allowedParsers\": \"\"\n        },\n        \"forward\": {\n            \"isEnabled\": true,\n            \"tgChatId\": 0,\n            \"forwardOriginal\": true,\n            \"forwardSignal\": true,\n            \"forwardTrade\": true\n        },\n        \"trade\": {\n            \"isEnabled\": false,\n            \"maxTpLevel\": 2\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/chats/f949e681-e704-4dc0-a55f-6e5f8ce4f3dd",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"chats",
+								"f949e681-e704-4dc0-a55f-6e5f8ce4f3dd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Chat",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"setting\": {\n        \"saveMessage\": {\n            \"isEnabled\": true\n        },\n        \"detectSingal\": {\n            \"isEnabled\": true,\n            \"allowedParsers\": \"\"\n        },\n        \"forward\": {\n            \"isEnabled\": true,\n            \"tgChatId\": 0,\n            \"forwardOriginal\": true,\n            \"forwardSignal\": true,\n            \"forwardTrade\": true\n        },\n        \"trade\": {\n            \"isEnabled\": true,\n            \"maxTpLevel\": 2\n        }\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server}}/api/chats/f949e681-e704-4dc0-a55f-6e5f8ce4f3dd",
+							"host": [
+								"{{server}}"
+							],
+							"path": [
+								"api",
+								"chats",
+								"f949e681-e704-4dc0-a55f-6e5f8ce4f3dd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

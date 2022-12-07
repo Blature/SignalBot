@@ -1,0 +1,13 @@
+{
+  "currency": "VITE/USDT",
+  "entries": [
+      "0.032",
+      "0.028"
+  ],
+  "targets": [
+      "0.032",
+      "0.028"
+  ],
+  "stopLoss": "0.024",
+  "isValid": true
+}

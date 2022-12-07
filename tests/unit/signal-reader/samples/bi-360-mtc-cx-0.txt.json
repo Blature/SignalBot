@@ -1,0 +1,17 @@
+{
+  "currency": "KLAY/USDT",
+  "entries": [
+      "0.14001"
+  ],
+  "targets": [
+      "0.1386",
+      "0.1372",
+      "0.1358",
+      "0.1344",
+      "0.133",
+      "0.1316"
+  ],
+  "stopLoss": "0.154",
+  "leverage": "Cross (20X)",
+  "isValid": true
+}

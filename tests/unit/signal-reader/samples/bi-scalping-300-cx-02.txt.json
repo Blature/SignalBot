@@ -1,0 +1,14 @@
+{
+  "currency": "APT/USDT",
+  "entries": [
+      "9.615",
+      "9.90"
+  ],
+  "targets": [
+      "9.615",
+      "9.90"
+  ],
+  "stopLoss": "10.15",
+  "leverage": "Cross 20x",
+  "isValid": true
+}

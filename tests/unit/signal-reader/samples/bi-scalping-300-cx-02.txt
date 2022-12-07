@@ -1,0 +1,15 @@
+#APT/USDT
+Signal Type: Short
+Leverage: Cross 20x
+Entry Targets: 9.615   9.90
+Take-Profit Targets: 
+1) 9.5850
+2) 9.5550
+3) 9.5200
+4) 9.4700
+5) 9.4000
+6) 9.3200
+7) 9.2200
+8) 9.1000
+ 
+Stop-Loss: 10.15

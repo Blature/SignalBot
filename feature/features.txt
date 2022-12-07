@@ -1,0 +1,8 @@
+features:
+
+- apply chat setting on signal and save trade object
+- save signal in db
+
+- send signal over http
+
+- prevent duplicate signal
